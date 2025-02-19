@@ -92,7 +92,7 @@ void remove_spaces(char *str) {
     *dst = '\0';
 }
 
-int main(void) {
+int main(int argc, char *argv[]) {
     char buffer[BUF_SIZE];
     size_t len = 0;
     int c;
@@ -106,7 +106,7 @@ int main(void) {
 
     remove_spaces(buffer);
 
-    p = buffer;
+    p = argv[1];
 
     int result = parse_expr();
 
